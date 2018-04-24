@@ -33,5 +33,12 @@ public class MainController {
     return "greeting";
   }
 
+  @GetMapping("/getRandomStarwarCharacter")
+  public String getRandomStarwarCharacter(Model model) {
+    model.addAttribute("name", informationService.getStarWarsCharacter().getName());
+    return "greeting";
+  }
+
+
 
 }
